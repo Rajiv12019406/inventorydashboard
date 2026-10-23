@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Source Serif 4", "Georgia", ui-serif, serif;
+
+  --color-navy-950: #0b1220;
+  --color-navy-900: #111827;
+  --color-navy-800: #1a2436;
+  --color-navy-700: #243047;
+  --color-navy-600: #334155;
+
+  --color-canvas: #f4f6f9;
+  --color-surface: #ffffff;
+  --color-surface-muted: #eef2f7;
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+
+  --color-ink: #0f172a;
+  --color-ink-muted: #475569;
+  --color-ink-subtle: #64748b;
+
+  --color-accent: #0f766e;
+  --color-accent-soft: #ccfbf1;
+  --color-indigo: #4338ca;
+  --color-indigo-soft: #e0e7ff;
+
+  --color-risk-critical: #b91c1c;
+  --color-risk-critical-soft: #fee2e2;
+  --color-risk-high: #c2410c;
+  --color-risk-high-soft: #ffedd5;
+  --color-risk-medium: #a16207;
+  --color-risk-medium-soft: #fef3c7;
+  --color-risk-low: #047857;
+  --color-risk-low-soft: #d1fae5;
+
+  --color-actual: #1e3a5f;
+  --color-forecast: #0d9488;
+  --color-interval: #99f6e4;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: var(--color-canvas);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  ::selection {
+    background: var(--color-accent-soft);
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-family: var(--font-display);
+  }
+}
